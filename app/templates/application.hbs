@@ -1,5 +1,11 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<button {{on "click" (fn (mut this.foo.bar) (concat this.foo.bar "baz"))}}>
+  Add "baz"
+</button>
 
-{{outlet}}
+<div>
+  "is it baz?" should show "false" at first, then "true", then "false" for all future presses.  
+</div>
+
+<div>
+  is it baz? {{this.foo.isBarBaz}}
+</div>
